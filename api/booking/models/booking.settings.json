@@ -1,0 +1,73 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bookings",
+  "info": {
+    "name": "booking",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": false
+    },
+    "slug": {
+      "type": "string",
+      "required": true
+    },
+    "price": {
+      "type": "integer",
+      "required": false
+    },
+    "type": {
+      "type": "string",
+      "required": false
+    },
+    "size": {
+      "type": "integer",
+      "required": false
+    },
+    "capacity": {
+      "type": "integer",
+      "required": false
+    },
+    "pets": {
+      "type": "boolean",
+      "required": false,
+      "default": false
+    },
+    "breakfast": {
+      "type": "boolean",
+      "required": false,
+      "default": false
+    },
+    "featured": {
+      "type": "boolean",
+      "required": false,
+      "default": false
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "extras": {
+      "type": "json",
+      "required": false
+    },
+    "images": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}
